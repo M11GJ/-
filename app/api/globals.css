@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 348 83% 47%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 348 83% 96%;
+    --secondary-foreground: 348 83% 47%;
+    --muted: 348 83% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 348 83% 47%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 348 83% 93%;
+    --input: 348 83% 93%;
+    --ring: 348 83% 47%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 348 83% 47%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 348 83% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 348 83% 20%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 348 83% 47%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 348 83% 20%;
+    --input: 348 83% 20%;
+    --ring: 348 83% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-primary font-bold;
+  }
+}
+
+@layer components {
+  .handbook-card {
+    @apply border-primary/20 hover:border-primary/50 transition-colors duration-200;
+  }
+
+  .handbook-section-title {
+    @apply text-2xl font-bold text-primary mb-4;
+  }
+
+  .handbook-table-header {
+    @apply bg-secondary text-secondary-foreground font-semibold;
+  }
+
+  .handbook-required {
+    @apply font-bold text-primary;
+  }
+
+  .handbook-elective {
+    @apply font-medium text-gray-700 dark:text-gray-300;
+  }
+
+  .handbook-program-required {
+    @apply font-bold text-primary text-center;
+  }
+
+  .handbook-program-elective {
+    @apply text-center;
+  }
+}
